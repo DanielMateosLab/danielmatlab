@@ -49,6 +49,24 @@ export default function Home() {
 
       <main>
         <article>
+          <h1>Personal information</h1>
+          <p>
+            Hi! Here is Dani. I am looking for a job as a web developer so I
+            have made this website to show you why I am the developer you are
+            looking for.
+          </p>
+          <ul>
+            <li>Age: born in 1996</li>
+            <li>Nationality: Spanish</li>
+            <li>Gender: male</li>
+            <li>Languages: native Spanish, fluent in English</li>
+            <li>
+              Location: Algatocín, Málaga. Travelling and moving disposition
+            </li>
+            <li>B Driving license</li>
+          </ul>
+        </article>
+        <article>
           <h1>Technologies</h1>
           {technologies.map((skill) => (
             <div key={skill.title}>
