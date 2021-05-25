@@ -13,9 +13,29 @@ const skills: Skill[] = [
       operators.`,
   },
   {
-    title: "Proficient Git",
+    title: "Proficient Git & GitHub",
     description: `Handle version control with the CLI using atomic commits, branches,
-      pull requests, etc.`,
+      pull requests, issues, etc.`,
+  },
+  {
+    title: "Strong with the basics",
+    description: `Thousands of hours spent working with HTML, CSS and Javascript.`,
+  },
+  {
+    title: "Typescript",
+    description:
+      "Boosted productivity thanks to the type safety typescript provides.",
+  },
+  {
+    title: "My favourite full stack",
+    description: `Love creating MVPs with full functionality
+      using to MongoDB, Node, NextJS and React.`,
+  },
+  {
+    title: "... and much more!",
+    description: `Docker, Express, GraphQL... Hmmm! It has been a lot of time since this
+      journey started, I've used a lot of interesting technologies, and I'm ready
+      to learn the one you need!`,
   },
 ];
 
