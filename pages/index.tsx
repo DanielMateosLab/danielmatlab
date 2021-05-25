@@ -5,7 +5,7 @@ interface Skill {
   title: string;
   description: string;
 }
-const skills: Skill[] = [
+const technologies: Skill[] = [
   {
     title: "Confortable CLI usage",
     description: `Navigate directories. Create, move, rename and delete files and
@@ -49,8 +49,8 @@ export default function Home() {
 
       <main>
         <article>
-          <h1>Skills</h1>
-          {skills.map((skill) => (
+          <h1>Technologies</h1>
+          {technologies.map((skill) => (
             <div key={skill.title}>
               <h2> {skill.title} </h2>
               <p> {skill.description} </p>
