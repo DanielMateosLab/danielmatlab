@@ -49,11 +49,15 @@ export default function Home() {
 
       <main>
         <article>
-          <h1>Personal information</h1>
+          <h1>About me</h1>
           <p>
-            Hi! Here is Dani. I am looking for a job as a web developer so I
-            have made this website to show you why I am the developer you are
-            looking for.
+            Hi! Here is Dani. After thousands of hours learning web development,
+            it is the moment to get my first job! In this webpage I have built,
+            you can have a glance at my personal information, my skills and my
+            portfolio.
+          </p>
+          <p>
+            If you have any doubt, don't hesitate to <a href="#">contact me</a>.
           </p>
           <ul>
             <li>Age: born in 1996</li>
