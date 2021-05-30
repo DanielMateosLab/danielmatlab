@@ -1,5 +1,6 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
+import Image from "next/image";
 
 interface Skill {
   title: string;
@@ -49,6 +50,13 @@ export default function Home() {
 
       <main>
         <article>
+          <Image
+            alt="picture of Daniel"
+            src="/profile.jpeg"
+            width="400"
+            height="400"
+            className={styles.profile}
+          />
           <h1>About me</h1>
           <p>
             Hi! Here is Dani. After thousands of hours learning web development,
