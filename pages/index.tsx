@@ -48,25 +48,39 @@ export default function Home() {
         <meta name="description" content="CV page" />
       </Head>
 
-      <main>
-        <article>
-          <Image
-            alt="picture of Daniel"
-            src="/profile.jpeg"
-            width="400"
-            height="400"
-            className={styles.profile}
-          />
+      <main className={styles.container}>
+        <article className={styles.page}>
+          <header className={styles.gridContainer}>
+            <div>
+              <Image
+                alt="picture of Daniel"
+                src="/profile.jpeg"
+                width="400"
+                height="400"
+                className={styles.profile}
+              />
+            </div>
+
+            <div>
+              <h1>Hi! Here is Dani</h1>
+              <p>
+                After thousands of hours learning web development, it is the
+                moment to get my first job!
+                <br />
+                In this webpage I have built you can have a glance at my
+                personal information, my skills and my portfolio.
+              </p>
+              <p>
+                If you have any doubt, don't hesitate to{" "}
+                <a href="#">contact me</a>!
+              </p>
+            </div>
+          </header>
+        </article>
+
+        <article className={styles.page}>
           <h1>About me</h1>
-          <p>
-            Hi! Here is Dani. After thousands of hours learning web development,
-            it is the moment to get my first job! In this webpage I have built,
-            you can have a glance at my personal information, my skills and my
-            portfolio.
-          </p>
-          <p>
-            If you have any doubt, don't hesitate to <a href="#">contact me</a>.
-          </p>
+
           <ul>
             <li>Age: born in 1996</li>
             <li>Nationality: Spanish</li>
@@ -78,6 +92,7 @@ export default function Home() {
             <li>B Driving license</li>
           </ul>
         </article>
+
         <article>
           <h1>Technologies</h1>
           {technologies.map((skill) => (

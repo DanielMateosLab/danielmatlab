@@ -1,3 +1,18 @@
+.container {
+  padding: 4rem 10rem;
+}
+
+.page {
+  min-height: 100vh;
+}
+
 .profile {
   border-radius: 50%;
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-items: center;
+  gap: 4rem;
 }
