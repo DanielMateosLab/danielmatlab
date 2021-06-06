@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import Image from "next/image";
@@ -51,13 +52,12 @@ export default function Home() {
       <main className={styles.container}>
         <article className={styles.page}>
           <header className={styles.gridContainer}>
-            <div>
+            <div className={styles.profile}>
               <Image
                 alt="picture of Daniel"
                 src="/profile.jpeg"
-                width="400"
-                height="400"
-                className={styles.profile}
+                layout="fill"
+                objectFit="cover"
               />
             </div>
 
