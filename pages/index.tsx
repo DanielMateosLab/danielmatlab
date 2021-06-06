@@ -62,7 +62,7 @@ export default function Home() {
             </div>
 
             <div>
-              <h1>Hi! Here is Dani</h1>
+              <h1 className={styles.greeting}>Hi! Here is Dani</h1>
               <p>
                 After thousands of hours learning web development, it is the
                 moment to get my first job!
