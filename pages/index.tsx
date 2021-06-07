@@ -31,7 +31,7 @@ const technologies: Skill[] = [
   {
     title: "My favourite full stack",
     description: `Love creating MVPs with full functionality
-      using to MongoDB, Node, NextJS and React.`,
+      using MongoDB, Node, NextJS and React.`,
   },
   {
     title: "... and much more!",
