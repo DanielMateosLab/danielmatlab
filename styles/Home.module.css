@@ -1,9 +1,14 @@
-.container {
-  margin: 1rem;
+.page {
+  min-height: calc(100vh - 1rem);
+  padding: 0.5rem;
 }
 
-.page {
-  min-height: 100vh;
+.card {
+  padding: 0.5rem;
+  background-color: #ffffff0d;
+  background-blend-mode: color;
+  height: 100%;
+  border-radius: 0.25rem;
 }
 
 .profile {
