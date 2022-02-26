@@ -1,10 +1,10 @@
-import Head from "next/head";
-import Image from "next/image";
-import styles from "../styles/Home.module.css";
+import Head from "next/head"
+import Image from "next/image"
+import styles from "../styles/Home.module.css"
 
 interface Skill {
-  title: string;
-  description: string;
+  title: string
+  description: string
 }
 const technologies: Skill[] = [
   {
@@ -38,7 +38,7 @@ const technologies: Skill[] = [
       journey started, I've used a lot of interesting technologies, and I'm ready
       to learn the one you need!`,
   },
-];
+]
 
 export default function Home() {
   return (
@@ -46,6 +46,7 @@ export default function Home() {
       <Head>
         <title>Daniel Mateos Labrador</title>
         <meta name="description" content="CV page" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 
       <main className={styles.container}>
@@ -103,5 +104,5 @@ export default function Home() {
         </article>
       </main>
     </div>
-  );
+  )
 }
