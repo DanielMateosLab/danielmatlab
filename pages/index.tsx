@@ -1,29 +1,38 @@
 import { GetStaticProps } from "next"
-import { useEffect, useState } from "react"
+import getHtmlFromReadme from "../lib/getHtmlFromReadme"
 
-export default function Home() {
-  const [content, setContent] = useState("")
-
-  useEffect(() => {
-    fetch(
-      "https://api.github.com/repos/DanielMateosLab/DanielMateosLab/readme",
-      {
-        headers: [["Accept", "application/vnd.github.v3.html"]],
-      }
-    )
-      .then((value) => value.text())
-      .then((value) => setContent(value))
-  }, [])
-
+interface Props {
+  homeContent: string
+}
+export default function Home({ homeContent }: Props) {
   return (
     <div>
-      <main dangerouslySetInnerHTML={{ __html: content }} />
+      <main dangerouslySetInnerHTML={{ __html: homeContent }} />
+
+      <style global jsx>
+        {`
+          main {
+            padding: 1rem;
+          }
+
+          @media (min-width: 796px) {
+            main: {
+              max-width: 796px;
+              margin: auto;
+            }
+          }
+        `}
+      </style>
     </div>
   )
 }
 
-export const getStaticProps: GetStaticProps = async (context) => {
+export const getStaticProps: GetStaticProps<Props> = async (context) => {
+  const homeContent = await getHtmlFromReadme("DanielMateosLab")
+
   return {
-    props: {},
+    props: {
+      homeContent,
+    },
   }
 }
