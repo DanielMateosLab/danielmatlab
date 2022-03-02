@@ -15,8 +15,8 @@ export default function Home({ homeContent }: Props) {
             padding: 1rem;
           }
 
-          @media (min-width: 796px) {
-            main: {
+          @media screen and (min-width: 796px) {
+            main {
               max-width: 796px;
               margin: auto;
             }
