@@ -37,9 +37,6 @@ export default function Home({ homeContent }: Props) {
             margin-top: ${spacing};
             margin-bottom: 0;
           }
-          img {
-            margin: 0.2rem;
-          }
 
           @media screen and (min-width: 796px) {
             main {
