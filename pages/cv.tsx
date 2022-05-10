@@ -1,5 +1,6 @@
 import CvHeader from "../lib/components/CvHeader"
 import ListItem from "../lib/components/ListItem"
+import { education, workExperience } from "../lib/pastExperiences"
 import { gray } from "../styles/constants"
 
 export default function Cv() {
@@ -85,6 +86,37 @@ export default function Cv() {
               Phone: +34 681 187 073.
             </p>
           </article>
+
+          <article>
+            <h2>Education</h2>
+            <div className="spaced-list">
+              {education.map((item) => (
+                <div key={item.degree} className="list-item">
+                  <span className="secondary-text">
+                    {item.startDate} - {item.endDate}
+                  </span>
+                  <span>{item.degree}</span>
+                  <span className="degree">{item.school}</span>
+                </div>
+              ))}
+            </div>
+          </article>
+
+          <article>
+            <h2>Experience</h2>
+            <div className="spaced-list">
+              {workExperience.map((item) => (
+                <div key={item.company} className="list-item">
+                  <span className="secondary-text">
+                    {item.startDate} - {item.endDate}
+                  </span>
+                  <span>{item.position}</span>
+                  <span className="degree">{item.company}</span>
+                  <span className="secondary-text">{item.location}</span>
+                </div>
+              ))}
+            </div>
+          </article>
         </div>
       </main>
 
@@ -93,6 +125,22 @@ export default function Cv() {
           .content {
             max-width: 80%;
             margin: auto;
+          }
+          .list-item {
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+          }
+          .spaced-list > :not(:last-child) {
+            margin-bottom: 1rem;
+          }
+
+          .secondary-text {
+            font-size: 0.8rem;
+            color: ${gray};
+          }
+          .degree {
+            font-weight: 300;
           }
         `}
       </style>
