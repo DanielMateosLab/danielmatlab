@@ -8,7 +8,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     <>
       <Head>
         <title>Daniel Mateos Labrador</title>
-        <meta name="description" content="Portfolio Website" />
+        <meta name="description" content="Curriculum Vitae. Resume." />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
       <Component {...pageProps} />
