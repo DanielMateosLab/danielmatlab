@@ -35,6 +35,8 @@ export default function CvHeader() {
         .role {
           margin: 0;
           text-transform: uppercase;
+          text-align: center;
+          padding: 0 2rem;
         }
         .name {
           font-size: 2rem;
