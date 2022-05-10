@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "print": "tsc lib/print.ts && node lib/print.js && rm lib/print.js"
   },
   "dependencies": {
     "next": "^12.1.0",
@@ -23,6 +24,8 @@
     "@types/react": "^17.0.39",
     "prettier": "^2.3.1",
     "prettier-plugin-organize-imports": "^2.1.0",
+    "puppeteer": "^14.0.0",
+    "ts-node": "^10.7.0",
     "typescript": "^4.5.5"
   }
 }
