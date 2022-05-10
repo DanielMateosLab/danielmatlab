@@ -4,8 +4,9 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: "Open Sans", sans-serif;
   font-size: 18px;
+  font-family: "Raleway";
+  line-height: 1.5;
 }
 
 *,
