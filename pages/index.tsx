@@ -1,6 +1,7 @@
 import Availability from "../lib/components/Availability"
 import Contact from "../lib/components/Contact"
 import CvHeader from "../lib/components/CvHeader"
+import DownloadPDF from "../lib/components/DownloadPDF"
 import Education from "../lib/components/Education"
 import Experience from "../lib/components/Experience"
 import Introduction from "../lib/components/Introduction"
@@ -24,6 +25,8 @@ export default function Cv() {
             <Education />
             <Contact />
           </div>
+
+          <DownloadPDF />
         </main>
       </div>
 
