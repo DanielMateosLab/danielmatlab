@@ -16,7 +16,7 @@ export default function ListItem({ children }: { children: React.ReactNode }) {
           }
           .dash {
             width: 1rem;
-            height: 0.25rem;
+            height: 0.3rem;
             border-top: 1px solid black;
             margin: 0 0.5rem;
           }
