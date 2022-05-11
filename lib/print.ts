@@ -9,7 +9,7 @@ async function printPdf() {
     printBackground: true,
     omitBackground: false,
     scale: 0.77,
-    path: "./cv.pdf",
+    path: "./daniel_mateos_labrador.pdf",
   })
 
   await browser.close()
