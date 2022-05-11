@@ -16,7 +16,7 @@ export default function Cv() {
               <ListItem>Learning web development since 2017.</ListItem>
               <ListItem>Mostly self-taught and self-sufficient.</ListItem>
               <ListItem>
-                Learn by doing. Check my{" "}
+                I learn by doing. Check my{" "}
                 <a
                   href="https://github.com/DanielMateosLab#-portfolio"
                   target="_blank"
@@ -38,7 +38,7 @@ export default function Cv() {
               </ListItem>
               <ListItem>
                 Former physical therapist, I am looking for a job in web
-                development because I am even more passionate about it.
+                development because it is even more motivating.
               </ListItem>
             </div>
           </article>
@@ -62,8 +62,10 @@ export default function Cv() {
           <article>
             <h2>Languages</h2>
             <div>
-              Spanish (native), English (professional), French (elementary) and
-              Italian (elementary).
+              <ListItem>Spanish (native)</ListItem>
+              <ListItem>English (professional)</ListItem>
+              <ListItem>French (elementary)</ListItem>
+              <ListItem>Italian (elementary)</ListItem>
             </div>
           </article>
 
@@ -158,7 +160,7 @@ export default function Cv() {
           }
 
           .secondary-text {
-            font-size: 0.8rem;
+            font-size: 0.9rem;
             color: ${darkGray};
           }
           .degree {
