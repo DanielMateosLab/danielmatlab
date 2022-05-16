@@ -1,3 +1,4 @@
+import { useRouter } from "next/router"
 import Availability from "../lib/components/Availability"
 import Contact from "../lib/components/Contact"
 import CvHeader from "../lib/components/CvHeader"
@@ -9,6 +10,9 @@ import Technologies from "../lib/components/Technologies"
 import { darkGray, gray } from "../styles/constants"
 
 export default function Cv() {
+  const router = useRouter()
+  const withProfilePicture = router.query.profilePicture
+
   return (
     <>
       <div className="cv-root">
@@ -19,9 +23,9 @@ export default function Cv() {
           <Technologies />
           <Languages />
           <Availability />
-          <Experience />
+          <Education />
           <div>
-            <Education />
+            <Experience />
             <Contact />
           </div>
         </main>
@@ -35,7 +39,7 @@ export default function Cv() {
             margin-bottom: 3rem;
           }
           .content :global(article) {
-            margin-bottom: 1.5rem;
+            margin-bottom: ${withProfilePicture ? "1.5rem" : "2.5rem"};
           }
           @media (min-width: 768px) {
             .content {
@@ -49,6 +53,9 @@ export default function Cv() {
 
       <style global jsx>
         {`
+          body {
+            font-size: ${withProfilePicture ? "18px" : "20px"};
+          }
           .cv-root {
             background: white;
           }

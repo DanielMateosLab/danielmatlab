@@ -6,15 +6,15 @@ export default function Technologies() {
       <h2>Technologies</h2>
       <div>
         <ListItem>
-          Languages: HTML5, CSS3, Javascript, Typescript, Python.
+          Languages: Typescript, Python, Javascript, HTML5, CSS3.
         </ListItem>
-        <ListItem>API "Patterns": REST, GraphQL.</ListItem>
         <ListItem>
-          Frameworks: React, Express, Next.js, Apollo, Jest, Flask, SQLAlchemy,
+          Frameworks: React, Next.js, Express, Apollo, Jest, Flask, SQLAlchemy,
           Pytest, Emotion, Bootstrap, Material-UI.
         </ListItem>
         <ListItem>Databases: MongoDB, PostgreSQL.</ListItem>
-        <ListItem>Other: Linux, Docker, Node, Git</ListItem>
+        <ListItem>API "Patterns": REST, GraphQL.</ListItem>
+        <ListItem>Other: Linux, Docker, Node, Git.</ListItem>
       </div>
     </article>
   )

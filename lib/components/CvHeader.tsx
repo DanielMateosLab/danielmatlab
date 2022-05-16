@@ -1,12 +1,18 @@
+import { useRouter } from "next/router"
 import { gray } from "../../styles/constants"
+import ProfilePicture from "./ProfilePicture"
 
 export default function CvHeader() {
+  const router = useRouter()
+  const withProfilePicture = router.query.profilePicture
+
   return (
     <>
-      <header>
+      <header className={withProfilePicture ? "with-pic" : ""}>
         <div className="texture" />
         <h1 className="name">Daniel Mateos Labrador</h1>
         <h2 className="role">Full Stack Developer</h2>
+        {withProfilePicture && <ProfilePicture />}
       </header>
 
       <style jsx>{`
@@ -15,9 +21,14 @@ export default function CvHeader() {
           flex-direction: column;
           align-items: center;
           position: relative;
-          margin-bottom: 3rem;
-          padding: 3rem 0;
+          margin-bottom: 4rem;
+          padding: 6rem 0;
         }
+        .with-pic {
+          margin-bottom: calc(4rem + 100px);
+          padding-bottom: calc(2rem + 100px);
+        }
+
         .texture {
           position: absolute;
           top: 0;
