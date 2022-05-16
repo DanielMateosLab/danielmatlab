@@ -16,15 +16,12 @@ export default function CvHeader() {
       </header>
 
       <style jsx>{`
-        :global(body) {
-          font-size: ${withProfilePicture ? "20px" : "22px"};
-        }
         header {
           display: flex;
           flex-direction: column;
           align-items: center;
           position: relative;
-          margin-bottom: 3rem;
+          margin-bottom: 4rem;
           padding: 6rem 0;
         }
         .with-pic {
