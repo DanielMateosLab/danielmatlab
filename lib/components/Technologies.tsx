@@ -14,7 +14,7 @@ export default function Technologies() {
         </ListItem>
         <ListItem>Databases: MongoDB, PostgreSQL.</ListItem>
         <ListItem>API "Patterns": REST, GraphQL.</ListItem>
-        <ListItem>Other: Linux, Docker, Node, Git</ListItem>
+        <ListItem>Other: Linux, Docker, Node, Git.</ListItem>
       </div>
     </article>
   )
