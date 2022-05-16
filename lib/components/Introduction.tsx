@@ -30,7 +30,7 @@ export default function Introduction() {
         </ListItem>
         <ListItem>
           Former physical therapist, I am looking for a job in web development
-          because it is even more motivating.
+          because it motivates me much more.
         </ListItem>
       </div>
     </article>
