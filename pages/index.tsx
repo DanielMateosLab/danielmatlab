@@ -24,10 +24,8 @@ export default function Cv() {
           <Languages />
           <Availability />
           <Education />
-          <div>
-            <Experience />
-            <Contact />
-          </div>
+          <Experience />
+          <Contact />
         </main>
       </div>
 
