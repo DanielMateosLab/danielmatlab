@@ -28,10 +28,7 @@ export default function Introduction() {
           </a>{" "}
           in May 2022.
         </ListItem>
-        <ListItem>
-          Former physical therapist, I am looking for a job in web development
-          because it motivates me much more.
-        </ListItem>
+        <ListItem>Working as Frontend Developer since June 2022.</ListItem>
       </div>
     </article>
   )
