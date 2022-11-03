@@ -3,9 +3,10 @@ export default function Availability() {
     <article>
       <h2>Availability</h2>
       <p>
-        Immediately available.
+        Immediately available to start part-time with the possibility of going
+        full-time within a month.
         <br />
-        Open to work remotely anywhere or to relocate within Spain or Italy.
+        Open to work remotely or to relocate.
       </p>
     </article>
   )
