@@ -1,5 +1,5 @@
 import { useRouter } from "next/router"
-import React, { Fragment, useEffect, useMemo, useState } from "react"
+import React, { useEffect, useState } from "react"
 import Availability from "../lib/components/Availability"
 import Contact from "../lib/components/Contact"
 import CvHeader from "../lib/components/CvHeader"
@@ -10,47 +10,50 @@ import Languages from "../lib/components/Languages"
 import Technologies from "../lib/components/Technologies"
 import { darkGray, gray } from "../styles/constants"
 
+enum ScreenSizes {
+  Small = "Small",
+  Big = "Big",
+}
+
 export default function Cv() {
   const router = useRouter()
   const withProfilePicture = router.query.profilePicture
-  const [isBigScreen, setIsBigScreen] = useState(false)
-
-  const Content = useMemo(() => {
-    let items = [
-      <Introduction />,
-      <Technologies />,
-      <Languages />,
-      <Availability />,
-      <Education />,
-      <Experience />,
-      <Contact />,
-    ].map((item, i) => <Fragment key={i}>{item}</Fragment>)
-    return isBigScreen ? splitElementsInTwoColumns(items) : items
-  }, [isBigScreen])
-
-  function splitElementsInTwoColumns(items: JSX.Element[]) {
-    const splitElements = items.reduce(
-      (acc, item, i) =>
-        i % 2 === 0
-          ? { ...acc, even: [...acc.even, item] }
-          : { ...acc, odd: [...acc.odd, item] },
-      { odd: [] as JSX.Element[], even: [] as JSX.Element[] }
-    )
-    const itemsInTwoColumns = [
-      <div className="column" key="even">
-        {splitElements.even}
-      </div>,
-      <div className="column" key="odd">
-        {splitElements.odd}
-      </div>,
-    ]
-    return itemsInTwoColumns
+  const [screenSize, setScreenSize] = useState<ScreenSizes | undefined>(
+    undefined
+  )
+  const Items = {
+    [ScreenSizes.Small]: (
+      <>
+        <Introduction />
+        <Technologies />
+        <Languages />
+        <Availability />
+        <Education />
+        <Experience />
+        <Contact />
+      </>
+    ),
+    [ScreenSizes.Big]: (
+      <>
+        <div className="column">
+          <Introduction />
+          <Languages />
+          <Education />
+          <Contact />
+        </div>
+        <div className="column">
+          <Technologies />
+          <Availability />
+          <Experience />
+        </div>
+      </>
+    ),
   }
 
   useEffect(() => {
     const isBigMQ = window.matchMedia("(min-width: 768px)")
     const handleMedia = (e: MediaQueryListEvent | MediaQueryList) =>
-      setIsBigScreen(e.matches)
+      setScreenSize(e.matches ? ScreenSizes.Big : ScreenSizes.Small)
 
     handleMedia(isBigMQ)
     isBigMQ.addEventListener("change", handleMedia)
@@ -61,31 +64,8 @@ export default function Cv() {
     <>
       <div className="cv-root">
         <CvHeader />
-
-        <main className="content">{Content}</main>
+        <main className="content">{Items[screenSize || ScreenSizes.Big]}</main>
       </div>
-
-      <style jsx>
-        {`
-          .content {
-            max-width: 80%;
-            margin: auto;
-            margin-bottom: 3rem;
-          }
-          .content :global(article) {
-            margin-bottom: ${withProfilePicture ? "1.5rem" : "2.5rem"};
-          }
-          @media (min-width: 768px) {
-            .content {
-              display: flex;
-              gap: 3rem;
-            }
-            .content > :global(div) {
-              width: 50%;
-            }
-          }
-        `}
-      </style>
 
       <style global jsx>
         {`
@@ -121,6 +101,24 @@ export default function Cv() {
           }
           .thin-text {
             font-weight: 300;
+          }
+          .content {
+            max-width: 80%;
+            margin: auto;
+            margin-bottom: 3rem;
+            opacity: ${screenSize ? 1 : 0};
+          }
+          .content :global(article) {
+            margin-bottom: ${withProfilePicture ? "1.5rem" : "2.5rem"};
+          }
+          @media (min-width: 768px) {
+            .content {
+              display: flex;
+              gap: 3rem;
+            }
+            .content > :global(div) {
+              width: 50%;
+            }
           }
         `}
       </style>
