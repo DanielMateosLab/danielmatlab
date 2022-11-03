@@ -32,9 +32,9 @@ export default function Experience() {
           <span>
             Worked as a freelance developing{" "}
             <a href="https://fada-var.fr/" target="_blank">
-              https://fada-var.fr/
-            </a>{" "}
-            website.
+              FADA's website
+            </a>
+            .
           </span>
         </div>
       </div>
