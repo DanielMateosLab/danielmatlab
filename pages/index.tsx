@@ -1,4 +1,5 @@
 import { useRouter } from "next/router"
+import React, { Fragment, useEffect, useMemo, useState } from "react"
 import Availability from "../lib/components/Availability"
 import Contact from "../lib/components/Contact"
 import CvHeader from "../lib/components/CvHeader"
@@ -12,21 +13,56 @@ import { darkGray, gray } from "../styles/constants"
 export default function Cv() {
   const router = useRouter()
   const withProfilePicture = router.query.profilePicture
+  const [isBigScreen, setIsBigScreen] = useState(false)
+
+  const Content = useMemo(() => {
+    let items = [
+      <Introduction />,
+      <Technologies />,
+      <Languages />,
+      <Availability />,
+      <Education />,
+      <Experience />,
+      <Contact />,
+    ].map((item, i) => <Fragment key={i}>{item}</Fragment>)
+    return isBigScreen ? splitElementsInTwoColumns(items) : items
+  }, [isBigScreen])
+
+  function splitElementsInTwoColumns(items: JSX.Element[]) {
+    const splitElements = items.reduce(
+      (acc, item, i) =>
+        i % 2 === 0
+          ? { ...acc, even: [...acc.even, item] }
+          : { ...acc, odd: [...acc.odd, item] },
+      { odd: [] as JSX.Element[], even: [] as JSX.Element[] }
+    )
+    const itemsInTwoColumns = [
+      <div className="column" key="even">
+        {splitElements.even}
+      </div>,
+      <div className="column" key="odd">
+        {splitElements.odd}
+      </div>,
+    ]
+    return itemsInTwoColumns
+  }
+
+  useEffect(() => {
+    const isBigMQ = window.matchMedia("(min-width: 768px)")
+    const handleMedia = (e: MediaQueryListEvent | MediaQueryList) =>
+      setIsBigScreen(e.matches)
+
+    handleMedia(isBigMQ)
+    isBigMQ.addEventListener("change", handleMedia)
+    return () => isBigMQ.removeEventListener("change", handleMedia)
+  }, [])
 
   return (
     <>
       <div className="cv-root">
         <CvHeader />
 
-        <main className="content">
-          <Introduction />
-          <Technologies />
-          <Languages />
-          <Availability />
-          <Education />
-          <Experience />
-          <Contact />
-        </main>
+        <main className="content">{Content}</main>
       </div>
 
       <style jsx>
@@ -41,9 +77,11 @@ export default function Cv() {
           }
           @media (min-width: 768px) {
             .content {
-              display: grid;
-              grid-template-columns: 1fr 1fr;
-              column-gap: 3rem;
+              display: flex;
+              gap: 3rem;
+            }
+            .content > :global(div) {
+              width: 50%;
             }
           }
         `}
