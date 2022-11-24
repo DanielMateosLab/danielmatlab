@@ -12,7 +12,18 @@ export default function CvHeader() {
         <div className="texture" />
         <h1 className="name">Daniel Mateos Labrador</h1>
         <h2 className="role">Full Stack Developer</h2>
-        {withProfilePicture && <ProfilePicture />}
+        <p className="summary">
+          I am a passionate software developer, I believe that technology is our
+          best chance to solve the complex problems we are facing. I am looking
+          for a company aligned with this values, where I can keep learning
+          while contributing to create systems that solve big challenges.
+        </p>
+
+        {withProfilePicture && (
+          <div className="pic-container">
+            <ProfilePicture />
+          </div>
+        )}
       </header>
 
       <style jsx>{`
@@ -22,7 +33,8 @@ export default function CvHeader() {
           align-items: center;
           position: relative;
           margin-bottom: 4rem;
-          padding: 6rem 0;
+          padding: 2rem 0;
+          gap: 0.75rem;
         }
         .with-pic {
           margin-bottom: calc(4rem + 100px);
@@ -52,13 +64,26 @@ export default function CvHeader() {
         .name {
           font-size: 2rem;
           font-weight: 300;
-          margin-bottom: 0.75rem;
         }
         .role {
           font-size: 1.2rem;
-          margin-bottom: 0.5rem;
           font-weight: 400;
           color: ${gray};
+        }
+        .summary {
+          font-size: 1rem;
+          font-weight: 300;
+          letter-spacing: 0.0225em;
+          line-height: 150%;
+          max-width: 80%;
+          margin: auto;
+          text-align: justify;
+        }
+
+        .pic-container {
+          position: absolute;
+          bottom: -100px;
+          left: calc(50% - 100px);
         }
       `}</style>
     </>
