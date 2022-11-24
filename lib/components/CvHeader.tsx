@@ -14,7 +14,7 @@ export default function CvHeader() {
         <h2 className="role">Full Stack Developer</h2>
         <p className="summary">
           I am a passionate software developer, I believe that technology is our
-          best chance to solve the complex problems we are facing. I am looking
+          best chance to solve the complex problems humanity faces. I am looking
           for a company aligned with this values, where I can keep learning
           while contributing to create systems that solve big challenges.
         </p>
