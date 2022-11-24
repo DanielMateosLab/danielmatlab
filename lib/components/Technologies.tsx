@@ -6,7 +6,7 @@ export default function Technologies() {
       <h2>Technologies</h2>
       <div>
         <ListItem>
-          Languages: Typescript, Python, Javascript, HTML5, CSS3.
+          Languages: Typescript, Python, Javascript, HTML5, CSS3, SCSS.
         </ListItem>
         <ListItem>
           Frameworks: React, Next.js, Express, Apollo, Jest, Flask, SQLAlchemy,
