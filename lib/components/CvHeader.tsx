@@ -38,7 +38,7 @@ export default function CvHeader() {
         }
         .with-pic {
           margin-bottom: calc(1.5rem + 100px);
-          padding-bottom: calc(1rem + 100px);
+          padding-bottom: calc(2rem + 100px);
         }
 
         .texture {

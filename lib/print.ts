@@ -12,11 +12,11 @@ const pdfCommonSettings = {
 } as const
 const pdfDynamicSettings = {
   [PrintVersion.WithPicture]: {
-    outputPath: "./daniel_mateos_labrador_wp.pdf",
+    path: "./daniel_mateos_labrador_wp.pdf",
     scale: 0.7,
   },
   [PrintVersion.WithoutPicture]: {
-    outputPath: "./daniel_mateos_labrador.pdf",
+    path: "./daniel_mateos_labrador.pdf",
     scale: 0.72,
   },
 } as const
