@@ -1,11 +1,11 @@
 import { useRouter } from "next/router"
 import React, { useEffect, useState } from "react"
+import Achievements from "../lib/components/Achievements"
 import Availability from "../lib/components/Availability"
 import Contact from "../lib/components/Contact"
 import CvHeader from "../lib/components/CvHeader"
 import Education from "../lib/components/Education"
 import Experience from "../lib/components/Experience"
-import Introduction from "../lib/components/Introduction"
 import Languages from "../lib/components/Languages"
 import Technologies from "../lib/components/Technologies"
 import { darkGray, gray } from "../styles/constants"
@@ -24,27 +24,27 @@ export default function Cv() {
   const Items = {
     [ScreenSizes.Small]: (
       <>
-        <Introduction />
+        <Experience />
+        <Achievements />
         <Technologies />
+        <Education />
         <Languages />
         <Availability />
-        <Education />
-        <Experience />
         <Contact />
       </>
     ),
     [ScreenSizes.Big]: (
       <>
         <div className="column">
-          <Introduction />
-          <Languages />
+          <Experience />
           <Education />
+          <Languages />
           <Contact />
         </div>
         <div className="column">
+          <Achievements />
           <Technologies />
           <Availability />
-          <Experience />
         </div>
       </>
     ),
