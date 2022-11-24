@@ -109,7 +109,7 @@ export default function Cv() {
             opacity: ${screenSize ? 1 : 0};
           }
           .content :global(article) {
-            margin-bottom: ${withProfilePicture ? "1.5rem" : "2.5rem"};
+            margin-bottom: ${withProfilePicture ? "1.5rem" : "2rem"};
           }
           @media (min-width: 768px) {
             .content {

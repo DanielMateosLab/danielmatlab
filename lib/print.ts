@@ -1,19 +1,25 @@
 import * as puppeteer from "puppeteer"
 
-const pdfSettings = {
-  format: "A4",
-  printBackground: true,
-  omitBackground: false,
-  scale: 0.77,
-} as const
 enum PrintVersion {
   WithPicture = "WithPicture",
   WithoutPicture = "WithoutPicture",
 }
-const outputPath = {
-  [PrintVersion.WithPicture]: "./daniel_mateos_labrador_wp.pdf",
-  [PrintVersion.WithoutPicture]: "./daniel_mateos_labrador.pdf",
-}
+
+const pdfCommonSettings = {
+  format: "A4",
+  printBackground: true,
+  omitBackground: false,
+} as const
+const pdfDynamicSettings = {
+  [PrintVersion.WithPicture]: {
+    outputPath: "./daniel_mateos_labrador_wp.pdf",
+    scale: 0.7,
+  },
+  [PrintVersion.WithoutPicture]: {
+    outputPath: "./daniel_mateos_labrador.pdf",
+    scale: 0.72,
+  },
+} as const
 
 async function printPdf() {
   const browser = await puppeteer.launch({ headless: true })
@@ -31,8 +37,8 @@ async function printVersion(version: PrintVersion, page: puppeteer.Page) {
   const url = `http://localhost:3000${queryParams}`
   await page.goto(url, { waitUntil: "networkidle0" })
   await page.pdf({
-    ...pdfSettings,
-    path: outputPath[version],
+    ...pdfCommonSettings,
+    ...pdfDynamicSettings[version],
   })
 }
 

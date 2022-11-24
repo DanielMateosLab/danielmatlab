@@ -32,13 +32,13 @@ export default function CvHeader() {
           flex-direction: column;
           align-items: center;
           position: relative;
-          margin-bottom: 4rem;
+          margin-bottom: 2rem;
           padding: 2rem 0;
           gap: 0.75rem;
         }
         .with-pic {
-          margin-bottom: calc(4rem + 100px);
-          padding-bottom: calc(2rem + 100px);
+          margin-bottom: calc(1.5rem + 100px);
+          padding-bottom: calc(1rem + 100px);
         }
 
         .texture {
