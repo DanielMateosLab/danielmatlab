@@ -17,7 +17,7 @@ const pdfDynamicSettings = {
   },
   [PrintVersion.WithoutPicture]: {
     path: "./daniel_mateos_labrador.pdf",
-    scale: 0.72,
+    scale: 0.66,
   },
 } as const
 
