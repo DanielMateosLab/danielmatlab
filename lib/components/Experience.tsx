@@ -5,9 +5,24 @@ export default function Experience() {
 
       <div className="spaced-list">
         <div className="list-item">
+          <span className="secondary-text">Dec 2022 - Present</span>
+          <span>
+            Frontend Developer at{" "}
+            <a href="https://www.metacontratas.com/" target="_blank">
+              Metadata
+            </a>
+            .
+          </span>
+          <div className="thin-text responsibilities">
+            I am currently working as a frontend developer using Typescript and
+            React.
+          </div>
+        </div>
+
+        <div className="list-item">
           <span className="secondary-text">Jun 2022 - November 2022</span>
           <span>
-            Worked as Fronted Developer for{" "}
+            Frontend Developer at{" "}
             <a href="https://attlos.com/" target="_blank">
               Attlos
             </a>
@@ -33,8 +48,7 @@ export default function Experience() {
         <div className="list-item">
           <span className="secondary-text">Oct 2021 - May 2022</span>
           <span>
-            Worked as a freelance Full Stack Developer developing websites such
-            as{" "}
+            Freelance Full Stack Developer developing websites such as{" "}
             <a href="https://fada-var.fr/" target="_blank">
               https://fada-var.fr
             </a>
