@@ -20,8 +20,8 @@ export default function Achievements() {
         </ListItem>
         <ListItem>
           Created a react service to control properties of floating or fixed
-          elements depending on the background elements using context, reducers
-          and hooks.
+          elements depending on their underlying elements using context,
+          reducers and hooks.
         </ListItem>
         <ListItem>
           Created a react service to lazy-load images using context, reducers

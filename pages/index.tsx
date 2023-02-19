@@ -103,7 +103,7 @@ export default function Cv() {
             font-weight: 300;
           }
           .content {
-            max-width: 80%;
+            max-width: 1024px;
             margin: auto;
             margin-bottom: 3rem;
             opacity: ${screenSize ? 1 : 0};

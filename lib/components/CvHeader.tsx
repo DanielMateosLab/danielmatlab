@@ -75,7 +75,7 @@ export default function CvHeader() {
           font-weight: 300;
           letter-spacing: 0.0225em;
           line-height: 150%;
-          max-width: 80%;
+          max-width: 1024px;
           margin: auto;
           text-align: justify;
         }
