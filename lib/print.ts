@@ -13,7 +13,7 @@ const pdfCommonSettings = {
 const pdfDynamicSettings = {
   [PrintVersion.WithPicture]: {
     path: "./daniel_mateos_labrador_wp.pdf",
-    scale: 0.7,
+    scale: 0.64,
   },
   [PrintVersion.WithoutPicture]: {
     path: "./daniel_mateos_labrador.pdf",
