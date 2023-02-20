@@ -11,7 +11,6 @@ export default function Experience() {
             <a href="https://www.metacontratas.com/" target="_blank">
               Metadata
             </a>
-            .
           </span>
           <div className="thin-text responsibilities">
             I am currently working as a frontend developer using Typescript and
@@ -21,13 +20,7 @@ export default function Experience() {
 
         <div className="list-item">
           <span className="secondary-text">Jun 2022 - November 2022</span>
-          <span>
-            Frontend Developer at{" "}
-            <a href="https://attlos.com/" target="_blank">
-              Attlos
-            </a>
-            .
-          </span>
+          <span>Frontend Developer at Attlos</span>
           <div className="thin-text responsibilities">
             Key responsibilities:
             <ul>

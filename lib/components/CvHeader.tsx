@@ -14,10 +14,10 @@ export default function CvHeader() {
         <h1 className="name">Daniel Mateos Labrador</h1>
         <h2 className="role">Full Stack Developer</h2>
         <HorizontalContainer as="p" className="summary">
-          I am a passionate software developer, I believe that technology is our
-          best chance to solve the complex problems humanity faces. I am looking
-          for a company aligned with this values, where I can keep learning
-          while contributing to create systems that solve big challenges.
+          Driven and passionate software developer seeking a company that shares
+          my belief in technology's power to solve complex global issues. Eager
+          to continue learning and collaborating with like-minded professionals
+          to create impactful systems that make a real difference.
         </HorizontalContainer>
 
         {withProfilePicture && (
