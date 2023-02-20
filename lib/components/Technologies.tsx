@@ -10,7 +10,7 @@ export default function Technologies() {
         </ListItem>
         <ListItem>
           Frameworks: React, Next.js, Express, Apollo, Jest, Flask, SQLAlchemy,
-          Pytest, Emotion, Bootstrap, Material-UI.
+          Pytest, TailwindCSS, Material-UI, Primereact, CSS in JS.
         </ListItem>
         <ListItem>Databases: MongoDB, PostgreSQL.</ListItem>
         <ListItem>API "Patterns": REST, GraphQL.</ListItem>
