@@ -6,6 +6,7 @@ import Contact from "../lib/components/Contact"
 import CvHeader from "../lib/components/CvHeader"
 import Education from "../lib/components/Education"
 import Experience from "../lib/components/Experience"
+import HorizontalContainer from "../lib/components/HorizontalContainer"
 import Languages from "../lib/components/Languages"
 import Technologies from "../lib/components/Technologies"
 import { darkGray, gray } from "../styles/constants"
@@ -64,13 +65,17 @@ export default function Cv() {
     <>
       <div className="cv-root">
         <CvHeader />
-        <main className="content">{Items[screenSize || ScreenSizes.Big]}</main>
+        <main>
+          <HorizontalContainer className="content">
+            {Items[screenSize || ScreenSizes.Big]}
+          </HorizontalContainer>
+        </main>
       </div>
 
       <style global jsx>
         {`
           body {
-            font-size: ${withProfilePicture ? "18px" : "20px"};
+            font-size: 20px;
           }
           .cv-root {
             background: white;
@@ -103,8 +108,6 @@ export default function Cv() {
             font-weight: 300;
           }
           .content {
-            max-width: 1024px;
-            margin: auto;
             margin-bottom: 3rem;
             opacity: ${screenSize ? 1 : 0};
           }

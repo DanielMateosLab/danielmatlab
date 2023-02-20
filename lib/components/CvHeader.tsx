@@ -1,5 +1,6 @@
 import { useRouter } from "next/router"
 import { gray } from "../../styles/constants"
+import HorizontalContainer from "./HorizontalContainer"
 import ProfilePicture from "./ProfilePicture"
 
 export default function CvHeader() {
@@ -12,12 +13,12 @@ export default function CvHeader() {
         <div className="texture" />
         <h1 className="name">Daniel Mateos Labrador</h1>
         <h2 className="role">Full Stack Developer</h2>
-        <p className="summary">
+        <HorizontalContainer as="p" className="summary">
           I am a passionate software developer, I believe that technology is our
           best chance to solve the complex problems humanity faces. I am looking
           for a company aligned with this values, where I can keep learning
           while contributing to create systems that solve big challenges.
-        </p>
+        </HorizontalContainer>
 
         {withProfilePicture && (
           <div className="pic-container">
