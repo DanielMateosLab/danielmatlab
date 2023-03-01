@@ -5,6 +5,7 @@ export default function ProfilePicture() {
   return (
     <>
       <Image
+        alt="A picture of me"
         className="profile-pic"
         src={profilePic}
         width="200"
