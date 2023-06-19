@@ -39,13 +39,13 @@ export default function Cv() {
         <div className="column">
           <Experience />
           <Education />
-          <Languages />
           <Contact />
         </div>
         <div className="column">
           <Achievements />
           <Technologies />
           <Availability />
+          <Languages />
         </div>
       </>
     ),
