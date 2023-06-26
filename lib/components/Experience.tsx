@@ -27,27 +27,6 @@ export default function Experience() {
         </div>
 
         <div className="list-item">
-          <span className="secondary-text">Oct 2021 - Present</span>
-          <span>Freelance Full Stack Developer</span>
-          <div className="thin-text responsibilities">
-            Key responsibilities:
-            <ul>
-              <li>
-                Analyzing customer requirements and collaborating to establish a
-                product and UI design
-              </li>
-              <li>
-                Developing Next.js and React applications using Typescript
-              </li>
-              <li>
-                Overseeing deployment primarily using Amazon Web Services (AWS)
-                as the cloud provider
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div className="list-item">
           <span className="secondary-text">Jun 2022 - November 2022</span>
           <span>Frontend Developer at Attlos</span>
           <div className="thin-text responsibilities">
@@ -63,6 +42,27 @@ export default function Experience() {
                 pixel-perfect match with Figma's design
               </li>
               <li>Managing version control using Git</li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="list-item">
+          <span className="secondary-text">Oct 2021 - Jun 2022</span>
+          <span>Freelance Full Stack Developer</span>
+          <div className="thin-text responsibilities">
+            Key responsibilities:
+            <ul>
+              <li>
+                Analyzing customer requirements and collaborating to establish a
+                product and UI design
+              </li>
+              <li>
+                Developing Next.js and React applications using Typescript
+              </li>
+              <li>
+                Overseeing deployment primarily using Amazon Web Services (AWS)
+                as the cloud provider
+              </li>
             </ul>
           </div>
         </div>
