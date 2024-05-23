@@ -13,7 +13,6 @@ export default function Experience() {
             </a>
           </span>
           <div className="thin-text responsibilities">
-            Key Responsibilities:
             <ul>
               <li>
                 Developing TypeScript applications using Next.js App Router and
@@ -39,15 +38,10 @@ export default function Experience() {
             </a>
           </span>
           <div className="thin-text responsibilities">
-            Key responsibilities:
             <ul>
               <li>Developing a B2B web app using React and Typescript</li>
               <li>Adhering to design guidelines provided in Figma</li>
               <li>Managing workflow with the Jira/Atlassian suite</li>
-              <li>
-                Working with a REST API specification documented in Swagger and
-                Apicurio
-              </li>
             </ul>
           </div>
         </div>
@@ -56,7 +50,6 @@ export default function Experience() {
           <span className="secondary-text">Jun 2022 - November 2022</span>
           <span>Frontend Developer at Attlos</span>
           <div className="thin-text responsibilities">
-            Key responsibilities:
             <ul>
               <li>Developing React applications using Typescript and SCSS</li>
               <li>
@@ -75,18 +68,13 @@ export default function Experience() {
           <span className="secondary-text">Oct 2021 - Jun 2022</span>
           <span>Freelance Full Stack Developer</span>
           <div className="thin-text responsibilities">
-            Key responsibilities:
             <ul>
               <li>
                 Analyzing customer requirements and collaborating to establish a
                 product and UI design
               </li>
               <li>
-                Developing Next.js and React applications using Typescript
-              </li>
-              <li>
-                Overseeing deployment primarily using Amazon Web Services (AWS)
-                as the cloud provider
+                Developing and deploying Next.js and Typescript applications
               </li>
             </ul>
           </div>
