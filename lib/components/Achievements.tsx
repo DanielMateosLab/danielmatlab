@@ -11,25 +11,12 @@ export default function Achievements() {
           feedback, monitoring and maintenance.
         </ListItem>
         <ListItem>
-          Mentored and reviewed the work of my coworkers in the frontend
-          development team.
+          Managed a team of junior developers, mentoring them, assigning tasks,
+          reviewing code and providing feedback.
         </ListItem>
         <ListItem>
-          Wrote unit tests for an in-production react web app previously
-          untested.
-        </ListItem>
-        <ListItem>
-          Created a react service to control properties of floating or fixed
-          elements depending on their underlying elements using context,
-          reducers and hooks.
-        </ListItem>
-        <ListItem>
-          Created a react service to lazy-load images using context, reducers
-          and hooks.
-        </ListItem>
-        <ListItem>
-          Created a python algorithm that uses graph theory and backtracking to
-          solve puzzles with brute force.
+          Wrote unit and integration tests for an in-production react web app
+          previously untested.
         </ListItem>
       </div>
     </article>
