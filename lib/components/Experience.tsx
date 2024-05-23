@@ -5,7 +5,33 @@ export default function Experience() {
 
       <div className="spaced-list">
         <div className="list-item">
-          <span className="secondary-text">Dec 2022 - Present</span>
+          <span className="secondary-text">Sep 2023 - Present</span>
+          <span>
+            Full Stack Typescript Developer at{" "}
+            <a href="https://asafedigital.com/" target="_blank">
+              A-Safe-Digital
+            </a>
+          </span>
+          <div className="thin-text responsibilities">
+            Key Responsibilities:
+            <ul>
+              <li>
+                Developing TypeScript applications using Next.js App Router and
+                Tailwind CSS in the frontend, and Node.js, Prisma, and Postgres
+                in the backend.
+              </li>
+              <li>Mentoring, reviewing, and managing junior developers.</li>
+              <li>Interviewing potential candidates for the company.</li>
+              <li>
+                Participating in the decision-making on technical and
+                organizational aspects of the team.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="list-item">
+          <span className="secondary-text">Dec 2022 - Aug 2023</span>
           <span>
             Frontend Developer at{" "}
             <a href="https://www.metacontratas.com/" target="_blank">
@@ -41,7 +67,6 @@ export default function Experience() {
                 Reviewing Pull Requests to ensure code quality and a
                 pixel-perfect match with Figma's design
               </li>
-              <li>Managing version control using Git</li>
             </ul>
           </div>
         </div>
