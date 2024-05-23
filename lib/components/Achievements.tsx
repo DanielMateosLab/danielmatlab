@@ -4,7 +4,7 @@ export default function Achievements() {
   return (
     <article>
       <h2>Achievements</h2>
-      <div>
+      <div className="thin-text">
         <ListItem>
           Took care of the whole development process for a client website, from
           initial talks and requirements collection to final deployment,

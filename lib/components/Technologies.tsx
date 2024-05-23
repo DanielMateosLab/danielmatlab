@@ -4,7 +4,7 @@ export default function Technologies() {
   return (
     <article>
       <h2>Technologies</h2>
-      <div>
+      <div className="thin-text">
         <ListItem>
           Languages: Typescript, Python, Javascript, C, HTML5, CSS3, SCSS.
         </ListItem>
