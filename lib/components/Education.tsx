@@ -6,6 +6,12 @@ export default function Education() {
     endDate: string
   }> = [
     {
+      school: "School 42 Malaga, Spain",
+      degree: "C Programming and Unix Systems Management",
+      startDate: "August 2023",
+      endDate: "Present",
+    },
+    {
       school: "4GeeksAcademy, Spain",
       degree: "Full Stack Web Developer Bootcamp",
       startDate: "January 2022",
